@@ -30,7 +30,19 @@ module.exports = {
           {
             test: /\.(scss|css)$/,
             use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
-            },
+          },
+          {
+            test: /\.html$/,
+            use: 'html-loader'
+          },
+          {
+            test: /\.(jpg|png|svg|jpeg|gif)$/,
+            type: 'asset/resource'
+          },
+          {
+            test: /\.(woff|woff2|eot|ttf|otf)$/i,
+            type: 'asset/resource',
+          },
         ]
     },
     devServer: {
