@@ -114,13 +114,13 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 220px;
-    height: 56px;
     flex-shrink: 0;
     border-radius: 10px;
     background: var(--blue_04, #5A98D0);
     box-shadow: 5px 10px 20px 0px rgba(53, 110, 173, 0.20);
     margin-top: 71px;
+    padding: 15px 48px;
+
 }
 
 .header__button {
@@ -133,7 +133,6 @@ header {
     font-weight: 400;
     line-height: 26px; /* 162.5% */
     letter-spacing: 0.64px;
-    padding: 10px 10px;
 }
 
 .header__button-wrapper:hover
@@ -262,9 +261,6 @@ header {
     // padding-bottom: 200px;
 }
 
-.our-client__content {
-    // height: 1549px;
-}
 
 .our-client__text-content {
     display: flex;
@@ -361,9 +357,6 @@ footer {
     border-radius: 0px 200px 0px 0px;
     background: rgba(49, 96, 153, 1);
     background-size: 75%;
-}
-
-.footer__content {
 }
 
 .lets-talk__content {
@@ -566,5 +559,114 @@ footer {
 @media (max-width: 767px) {
     .card__content-wrapper {
         gap: 20px;
+    }
+
+    .footer__content,
+    .footer-info {
+        gap: 30px;
+    }
+
+}
+
+@media (max-width: 715px) {
+    .line {
+        width: 500px;
+    }
+
+    .our-client__description {
+        margin: 0;
+    }
+}
+
+@media (max-width: 687px) {
+    .container {
+        padding-left: 5px;
+    }
+
+    .client__card {
+        font-size: 16px;
+    }
+
+    .card {
+        width: 300px;
+        height: 500px;
+    }
+
+    .card__h2 {
+        font-size: 16px;
+    }
+
+    .card__description {
+        font-size: 12px;
+    }
+
+    .what-we-do__content {
+        height: 100%;
+    }
+
+    .card__content-wrapper {
+        position: relative;
+    }
+}
+
+@media (max-width: 643px) {
+
+    .header__h1 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 637px) {
+    .card1 {
+        margin-top: 50px;
+    }
+
+    .card3 {
+        margin: 0;
+    }
+
+    .card__content-wrapper {
+        justify-content: center;
+    }
+
+    .footer__content,
+    .footer-info {
+        gap: 0;
+    }
+}
+
+@media (max-width: 593px) {
+    .lets-talk__button {
+        padding: 10px 50px;
+    }
+}
+
+@media (max-width: 557px) {
+    .content__h1 {
+        width: 90%;
+    }
+
+    .lets-talk__content {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 520px) {
+    .line {
+        width: 300px;
+    }
+
+    .client__card {
+        font-size: 12px;
+    }
+
+    .header__h1 {
+        font-size: 32px;
+        line-height: 35px;
+    }
+
+    .header__p {
+        width: 100%;
+        font-size: 14px;
     }
 }
