@@ -114,13 +114,13 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 220px;
-    height: 56px;
     flex-shrink: 0;
     border-radius: 10px;
     background: var(--blue_04, #5A98D0);
     box-shadow: 5px 10px 20px 0px rgba(53, 110, 173, 0.20);
     margin-top: 71px;
+    padding: 15px 48px;
+    width: 220px;
 }
 
 .header__button {
@@ -133,7 +133,6 @@ header {
     font-weight: 400;
     line-height: 26px; /* 162.5% */
     letter-spacing: 0.64px;
-    padding: 10px 10px;
 }
 
 .header__button-wrapper:hover
@@ -206,6 +205,13 @@ header {
 
 .card__h2 {
     margin: 56px 0 16px 0;
+    color: #1F3F68;
+    font-family: $font-gilroy-semibold;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px; /* 150% */
+    letter-spacing: 1px;
 }
 
 .content__description {
@@ -262,9 +268,6 @@ header {
     // padding-bottom: 200px;
 }
 
-.our-client__content {
-    // height: 1549px;
-}
 
 .our-client__text-content {
     display: flex;
@@ -361,9 +364,6 @@ footer {
     border-radius: 0px 200px 0px 0px;
     background: rgba(49, 96, 153, 1);
     background-size: 75%;
-}
-
-.footer__content {
 }
 
 .lets-talk__content {
@@ -470,7 +470,7 @@ footer {
     letter-spacing: 0.8px;
     opacity: 0.4;
     margin-top: 64px;
-    margin-bottom: 64px;
+    padding-bottom: 64px;
 }
 
 .footer-info {
@@ -566,5 +566,177 @@ footer {
 @media (max-width: 767px) {
     .card__content-wrapper {
         gap: 20px;
+    }
+
+    .footer__content,
+    .footer-info {
+        gap: 30px;
+    }
+
+}
+
+@media (max-width: 715px) {
+    .line {
+        width: 500px;
+    }
+
+    .our-client__description {
+        margin: 0;
+    }
+}
+
+@media (max-width: 687px) {
+    .container {
+        padding-left: 5px;
+    }
+
+    .client__card {
+        font-size: 16px;
+    }
+
+    .card {
+        width: 300px;
+        height: 500px;
+    }
+
+    .card__h2 {
+        font-size: 16px;
+    }
+
+    .card__description {
+        font-size: 12px;
+    }
+
+    .what-we-do__content {
+        height: 100%;
+    }
+
+    .card__content-wrapper {
+        position: relative;
+    }
+}
+
+@media (max-width: 643px) {
+
+    .header__h1 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 637px) {
+    .card1 {
+        margin-top: 50px;
+    }
+
+    .card3 {
+        margin: 0;
+    }
+
+    .card__content-wrapper {
+        justify-content: center;
+    }
+
+    .footer__content,
+    .footer-info {
+        gap: 0;
+    }
+}
+
+@media (max-width: 593px) {
+    .lets-talk__button {
+        padding: 10px 50px;
+        margin-right: 0;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 557px) {
+    .content__h1 {
+        width: 90%;
+    }
+
+    .lets-talk__content {
+        flex-direction: column;
+
+    }
+}
+
+@media (max-width: 520px) {
+    .line {
+        width: 300px;
+    }
+
+    header {
+        margin-bottom: 0;
+    }
+
+    .client__card {
+        font-size: 12px;
+    }
+
+    .header__h1 {
+        font-size: 32px;
+        line-height: 35px;
+    }
+
+    .content__h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .header__p {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .footer__content {
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .footer-info__about-us__h2 {
+        font-size: 18px;
+    }
+
+    .footer-info {
+        gap: 30px   ;
+    }
+
+    .footer__span {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 483px) {
+    .our-client__text-content {
+        margin-left: 30px;
+        gap: 30px   ;
+    }
+    
+    .our-client__text-content {
+        flex-direction: column;
+    }
+
+    .grid__wrapper {
+        grid-template-areas: "card1 card2"
+                             "card3 card4"
+                             "card5 card6"
+    }
+
+    .client__card2,
+    .client__card6 {
+        border-right: none;
+    }
+
+    .client__card7,
+    .client__card8 {
+        border-top: 1px #FFF solid;
+    }
+}
+
+@media (max-width: 400px) {
+    header {
+        background: transparent;
     }
 }
