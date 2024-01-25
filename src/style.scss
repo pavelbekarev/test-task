@@ -31,13 +31,13 @@ $font-gilroy-semibold: "Gilroy-SemiBold";
 .container {
     max-width: 941px;
     margin: 0 auto;
-    background-color: rgba(251, 152, 152, .2);
+    // background-color: rgba(251, 152, 152, .2);
 }
 
 
                                     // Header
 header {
-    height: 768px;
+    // height: 768px;
     flex-shrink: 0;
     margin-bottom: 180px;
     background: url("./img/header.svg") no-repeat;
@@ -667,7 +667,7 @@ footer {
     }
 
     header {
-        margin-bottom: 0;
+        margin-bottom: 0px;
     }
 
     .client__card {
