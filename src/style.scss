@@ -120,7 +120,7 @@ header {
     box-shadow: 5px 10px 20px 0px rgba(53, 110, 173, 0.20);
     margin-top: 71px;
     padding: 15px 48px;
-
+    width: 220px;
 }
 
 .header__button {
@@ -205,6 +205,13 @@ header {
 
 .card__h2 {
     margin: 56px 0 16px 0;
+    color: #1F3F68;
+    font-family: $font-gilroy-semibold;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px; /* 150% */
+    letter-spacing: 1px;
 }
 
 .content__description {
@@ -463,7 +470,7 @@ footer {
     letter-spacing: 0.8px;
     opacity: 0.4;
     margin-top: 64px;
-    margin-bottom: 64px;
+    padding-bottom: 64px;
 }
 
 .footer-info {
@@ -638,6 +645,8 @@ footer {
 @media (max-width: 593px) {
     .lets-talk__button {
         padding: 10px 50px;
+        margin-right: 0;
+        margin: 0 auto;
     }
 }
 
@@ -648,12 +657,17 @@ footer {
 
     .lets-talk__content {
         flex-direction: column;
+
     }
 }
 
 @media (max-width: 520px) {
     .line {
         width: 300px;
+    }
+
+    header {
+        margin-bottom: 0;
     }
 
     .client__card {
@@ -665,8 +679,64 @@ footer {
         line-height: 35px;
     }
 
+    .content__h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
     .header__p {
         width: 100%;
         font-size: 14px;
+    }
+
+    .footer__content {
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .footer-info__about-us__h2 {
+        font-size: 18px;
+    }
+
+    .footer-info {
+        gap: 30px   ;
+    }
+
+    .footer__span {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 483px) {
+    .our-client__text-content {
+        margin-left: 30px;
+        gap: 30px   ;
+    }
+    
+    .our-client__text-content {
+        flex-direction: column;
+    }
+
+    .grid__wrapper {
+        grid-template-areas: "card1 card2"
+                             "card3 card4"
+                             "card5 card6"
+    }
+
+    .client__card2,
+    .client__card6 {
+        border-right: none;
+    }
+
+    .client__card7,
+    .client__card8 {
+        border-top: 1px #FFF solid;
+    }
+}
+
+@media (max-width: 400px) {
+    header {
+        background: transparent;
     }
 }
