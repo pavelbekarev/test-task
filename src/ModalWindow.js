@@ -1,12 +1,26 @@
 'use strict'
 
-const button = document.querySelector(".lets-talk__button");
-const footer__h1 = document.querySelector(".footer__h1");
+const button = document.getElementById("button");
+const modalWindow = document.getElementById("modalWindow");
+const closeButton = document.querySelector(".close__button");
 
-const setColor = () => {
+
+const ModalWindow = () => {
     button.addEventListener("click", () => {
-        footer__h1.style.color = "blue"
+        modalWindow.classList.toggle("modal-window__wrapper--active");
     });
+
+    closeButton.addEventListener("click", () => {
+        modalWindow.classList.toggle("modal-window__wrapper--active");
+    })
+
+    document.addEventListener("click", e => {
+        const click = e.composedPath().includes(modalWindow);
+        
+        if ( click ) {
+            modalWindow.classList.toggle("modal-window__wrapper--active");
+        }
+    })
 }
 
-export default setColor;
+export default ModalWindow;

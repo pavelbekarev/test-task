@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>homepage</title>
 </head>
-<body>
+<body class="body">
     <header>
         <section class="section">
             <div class="wrapper">
@@ -107,34 +107,11 @@
                             <h1 class="content__h1 footer__h1">Intersted to woek with our team?</h1>
                             <p class="content__description footer__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                         </div>
-                        <a class="lets-talk__button">Let`s Talk</a>
+                        <a id="button" class="lets-talk__button">Let`s Talk</a>
                     </div>
                 </div>
-                <div class="modal-window__wrapper">
-                    <h2 class="modal-window__h2">Send us message</h2>
-                    <form class="form">
-                        <div class="form__item">
-                            <label class="form__header" for="name">
-                                Full Name
-                            </label>
-                            <input class="form__input" type="text" name="name" placeholder="Your Name">
-                        </div>
-
-                        <div class="form__item">
-                            <label class="form__header" for="email">
-                                Email
-                            </label>
-                            <input class="form__input" type="text" name="email" placeholder="Your Email">
-                        </div>
-
-                        <div class="form__item">
-                            <label class="form__header" for="message">
-                                Message
-                            </label>
-                            <input class="form__input form__input-message" type="text" name="message" placeholder="Your Message">
-                        </div>
-                    </form>
-                </div>
+                
+                
                 <div class="line"></div>
                 <div class="container">
                     <div class="footer__content">
@@ -181,6 +158,64 @@
                     <div class="signature">
                         2019 © Afrianska. All rights reserved.
                     </div>
+                </div>
+            </div>
+            <div id="modalWindow" class="modalWindow">
+                <div id="modalWindow" class="modal-window__wrapper">
+                    <div class="upper__content">
+                        <h2 class="modal-window__h2">Send us message</h2>
+                        <span class="close__button">X</span>
+                    </div>
+                    <form class="form">
+                        <div class="form__item">
+                            <label 
+                                class="form__header" 
+                                for="name"
+                            >
+                                Full Name
+                            </label>
+                            <input 
+                                class="form__input" 
+                                type="text" 
+                                name="name" 
+                                placeholder="Your Name"
+                                required
+                                minlength="10"
+                            >
+                        </div>
+                        <div class="form__item">
+                            <label 
+                                class="form__header" 
+                                for="email"
+                            >
+                                Email
+                            </label>
+                            <input 
+                                class="form__input" 
+                                type="text"
+                                name="email" 
+                                placeholder="Your Email"
+                            >
+                        </div>
+
+                        <div class="form__item">
+                            <label 
+                                class="form__header" 
+                                for="message"
+                            >
+                                Message
+                            </label>
+                            <input
+                                class="form__input form__input-message" 
+                                type="text" 
+                                name="message" 
+                                placeholder="Your Message"
+                            >
+                        </div>
+                        <div class="form__item">
+                            <input class="form__submit" type="submit" value="SUBMIT">
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>

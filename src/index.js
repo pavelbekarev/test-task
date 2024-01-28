@@ -1,6 +1,6 @@
 import './style.scss'
 import "./ModalWindow.scss"
-import setColor from "./ModalWindow.js"
+import ModalWindow from "./ModalWindow.js"
 
 
-setColor();
+ModalWindow();
