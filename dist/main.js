@@ -2,6 +2,33 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/FormValidate.js":
+/*!*****************************!*\
+  !*** ./src/FormValidate.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+
+
+const inputName = document.getElementById("input-name");
+const inputEmail = document.getElementById("input-email");
+const inputMessage = document.getElementById("input-message");
+const submitButton = document.getElementById("submit-button");
+const FormValidate = () => {
+  submitButton.addEventListener("click", () => {
+    if (inputName.length < 10) {
+      document.querySelector(".error-name").classList.toggle("error-visible");
+    }
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FormValidate);
+
+/***/ }),
+
 /***/ "./src/ModalWindow.js":
 /*!****************************!*\
   !*** ./src/ModalWindow.js ***!
@@ -24,9 +51,9 @@ const ModalWindow = () => {
   closeButton.addEventListener("click", () => {
     modalWindow.classList.toggle("modal-window__wrapper--active");
   });
-  document.addEventListener("click", e => {
-    const click = e.composedPath().includes(modalWindow);
-    if (click) {
+  modalWindow.addEventListener("click", e => {
+    const click = e.composedPath().includes(document.querySelector(".modal-window__wrapper"));
+    if (!click) {
       modalWindow.classList.toggle("modal-window__wrapper--active");
     }
   });
@@ -95,14 +122,11 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@font-face {
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
   box-shadow: 5px 10px 50px 0px rgba(16, 112, 177, 0.2);
+  z-index: 100;
 }
 
 .modal-window__wrapper--active {
   display: flex;
-}
-
-.body__opacity {
-  opacity: 0;
 }
 
 .upper__content {
@@ -186,7 +210,23 @@ ___CSS_LOADER_EXPORT___.push([module.id, `@font-face {
   font-weight: 600;
   line-height: 26px;
   letter-spacing: 0.64px;
-}`, "",{"version":3,"sources":["webpack://./src/ModalWindow.scss"],"names":[],"mappings":"AAAA;EACI,8BAAA;EACA,4CAAA;EACA,mBAAA;AACJ;AAEA;EACI,6BAAA;EACA,4CAAA;EACA,mBAAA;AAAJ;AAMA;EACI,aAAA;EACA,sBAAA;EACA,2BAAA;EACA,uBAAA;EAEA,eAAA;EACA,MAAA;EACA,SAAA;EACA,OAAA;EACA,QAAA;EACA,WAAA;EACA,YAAA;EACA,8BAAA;EACA,SAAA;AALJ;;AASA;EAGI,cAAA;EACA,YAAA;EACA,aAAA;EACA,aAAA;EACA,mBAAA;EACA,oCAAA;EACA,qDAAA;AARJ;;AAWA;EACI,aAAA;AARJ;;AAWA;EACI,UAAA;AARJ;;AAaA;EACI,aAAA;EACA,eAAA;EACA,WAAA;EACA,qBAAA;EACA,8BAAA;AAVJ;;AAaA;EACI,8BAnDmB;EAoDnB,cAAA;EACA,eAAA;AAVJ;;AAkBA;EACI,cAAA;EACA,8BA/DmB;EAgEnB,eAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA;EACA,qBAAA;EACA,yBAAA;AAfJ;;AAmBA;EACI,aAAA;EACA,sBAAA;EACA,SAAA;AAhBJ;;AAmBA;EACI,aAAA;EACA,sBAAA;EACA,QAAA;AAhBJ;;AAoBA;EACI,6BAAA;EACA,mBAAA;EACA,yCAAA;EACA,YAAA;EAEA,8BAAA;EACA,6BA9FkB;EA+FlB,eAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA,EAAA,WAAA;EACA,sBAAA;AAlBJ;;AAqBA;EACI,6BAAA;AAlBJ;;AAqBA;EACI,cAAA;EACA,6BA5GkB;EA6GlB,eAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA,EAAA,WAAA;EACA,sBAAA;EACA,YAAA;AAlBJ;;AAqBA;EACI,mBAAA;EACA,mCAAA;EACA,qDAAA;EACA,YAAA;EACA,mBAAA;EACA,gBAAA;EAEA,WAAA;EAEA,kBAAA;EACA,8BA/HmB;EAgInB,eAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA;EACA,sBAAA;AApBJ","sourcesContent":["@font-face {\r\n    font-family: 'Gilroy-SemiBold';\r\n    src: url('./fonts/Gilroy-SemiBold.ttf');\r\n    font-weight: normal;\r\n}\r\n\r\n@font-face {\r\n    font-family: 'Gilroy-Regular';\r\n    src: url('./fonts/Gilroy-Regular.ttf');\r\n    font-weight: normal;\r\n}\r\n\r\n$font-gilroy-regular: \"Gilroy-Regular\";\r\n$font-gilroy-semibold: \"Gilroy-SemiBold\";\r\n\r\n.modalWindow {\r\n    display: none;\r\n    flex-direction: column;\r\n    justify-content: flex-start;\r\n    align-items: flex-start;\r\n\r\n    position: fixed;\r\n    top: 0;\r\n    bottom: 0;\r\n    left: 0;\r\n    right: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background: rgba(0, 0, 0, 0.3);\r\n    gap: 48px;\r\n\r\n}\r\n\r\n.modal-window__wrapper {\r\n\r\n\r\n    margin: 0 auto;\r\n    width: 540px;\r\n    height: 800px;\r\n    padding: 56px;\r\n    border-radius: 10px;\r\n    background-color: rgba(100%, 100%, 100%, 1);\r\n    box-shadow: 5px 10px 50px 0px rgba(16, 112, 177, 0.20);\r\n}\r\n\r\n.modal-window__wrapper--active {\r\n    display: flex;\r\n}\r\n\r\n.body__opacity {\r\n    opacity: 0;\r\n}\r\n\r\n\r\n\r\n.upper__content {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    width: 100%;\r\n    align-content: center;\r\n    justify-content: space-between;\r\n}\r\n\r\n.close__button {\r\n    font-family: $font-gilroy-semibold;\r\n    color: #1F3F68;\r\n    cursor: pointer;\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n.modal-window__h2 {\r\n    color: #1F3F68;\r\n    font-family: $font-gilroy-semibold;\r\n    font-size: 20px;\r\n    font-style: normal;\r\n    font-weight: 600;\r\n    line-height: 30px;\r\n    letter-spacing: 0.8px;\r\n    text-transform: uppercase;\r\n}\r\n\r\n\r\n.form {\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 32px;\r\n}\r\n\r\n.form__item {\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 8px;\r\n\r\n}\r\n\r\n.form__input {\r\n    padding: 21px 200px 21px 42px;\r\n    border-radius: 10px;\r\n    border: 1px solid var(--blue_03, #356EAD);\r\n    opacity: 0.4;\r\n\r\n    color: var(--Blue_01, #1F3F68);\r\n    font-family: $font-gilroy-regular;\r\n    font-size: 16px;\r\n    font-style: normal;\r\n    font-weight: 300;\r\n    line-height: 30px; /* 187.5% */\r\n    letter-spacing: 0.64px;\r\n}\r\n\r\n.form__input-message {\r\n    padding: 21px 200px 93px 36px;\r\n}\r\n\r\n.form__header {\r\n    color: #1F3F68;\r\n    font-family: $font-gilroy-regular;\r\n    font-size: 16px;\r\n    font-style: normal;\r\n    font-weight: 400;\r\n    line-height: 30px; /* 187.5% */\r\n    letter-spacing: 0.64px;\r\n    opacity: 0.8;\r\n}\r\n\r\n.form__submit {\r\n    border-radius: 10px;\r\n    background: var(--blue_04, #5A98D0);\r\n    box-shadow: 5px 20px 50px 0px rgba(16, 112, 177, 0.20);\r\n    border: none;\r\n    padding: 23px 184px;\r\n    margin-top: 65px;\r\n\r\n    color: #FFF;\r\n\r\n    text-align: center;\r\n    font-family: $font-gilroy-semibold;\r\n    font-size: 16px;\r\n    font-style: normal;\r\n    font-weight: 600;\r\n    line-height: 26px;\r\n    letter-spacing: 0.64px;\r\n}\r\n\r\n"],"sourceRoot":""}]);
+}
+
+.error {
+  color: red;
+  font-family: "Gilroy-SemiBold";
+  text-align: center;
+}
+
+.error-name,
+.error-email,
+.error-message {
+  display: none;
+}
+
+.error-visible {
+  display: block;
+}`, "",{"version":3,"sources":["webpack://./src/ModalWindow.scss"],"names":[],"mappings":"AAAA;EACI,8BAAA;EACA,4CAAA;EACA,mBAAA;AACJ;AAEA;EACI,6BAAA;EACA,4CAAA;EACA,mBAAA;AAAJ;AAMA;EACI,aAAA;EACA,sBAAA;EACA,2BAAA;EACA,uBAAA;EAEA,eAAA;EACA,MAAA;EACA,SAAA;EACA,OAAA;EACA,QAAA;EACA,WAAA;EACA,YAAA;EACA,8BAAA;EACA,SAAA;AALJ;;AAQA;EACI,cAAA;EACA,YAAA;EACA,aAAA;EACA,aAAA;EACA,mBAAA;EACA,oCAAA;EACA,qDAAA;EACA,YAAA;AALJ;;AAQA;EACI,aAAA;AALJ;;AAQA;EACI,aAAA;EACA,eAAA;EACA,WAAA;EACA,qBAAA;EACA,8BAAA;AALJ;;AAQA;EACI,8BA3CmB;EA4CnB,cAAA;EACA,eAAA;AALJ;;AAaA;EACI,cAAA;EACA,8BAvDmB;EAwDnB,eAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA;EACA,qBAAA;EACA,yBAAA;AAVJ;;AAcA;EACI,aAAA;EACA,sBAAA;EACA,SAAA;AAXJ;;AAcA;EACI,aAAA;EACA,sBAAA;EACA,QAAA;AAXJ;;AAeA;EACI,6BAAA;EACA,mBAAA;EACA,yCAAA;EACA,YAAA;EAEA,8BAAA;EACA,6BAtFkB;EAuFlB,eAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA,EAAA,WAAA;EACA,sBAAA;AAbJ;;AAgBA;EACI,6BAAA;AAbJ;;AAgBA;EACI,cAAA;EACA,6BApGkB;EAqGlB,eAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA,EAAA,WAAA;EACA,sBAAA;EACA,YAAA;AAbJ;;AAgBA;EACI,mBAAA;EACA,mCAAA;EACA,qDAAA;EACA,YAAA;EACA,mBAAA;EACA,gBAAA;EAEA,WAAA;EAEA,kBAAA;EACA,8BAvHmB;EAwHnB,eAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA;EACA,sBAAA;AAfJ;;AAkBA;EACI,UAAA;EACA,8BAjImB;EAkInB,kBAAA;AAfJ;;AAkBA;;;EAGI,aAAA;AAfJ;;AAkBA;EACI,cAAA;AAfJ","sourcesContent":["@font-face {\r\n    font-family: 'Gilroy-SemiBold';\r\n    src: url('./fonts/Gilroy-SemiBold.ttf');\r\n    font-weight: normal;\r\n}\r\n\r\n@font-face {\r\n    font-family: 'Gilroy-Regular';\r\n    src: url('./fonts/Gilroy-Regular.ttf');\r\n    font-weight: normal;\r\n}\r\n\r\n$font-gilroy-regular: \"Gilroy-Regular\";\r\n$font-gilroy-semibold: \"Gilroy-SemiBold\";\r\n\r\n.modalWindow {\r\n    display: none;\r\n    flex-direction: column;\r\n    justify-content: flex-start;\r\n    align-items: flex-start;\r\n\r\n    position: fixed;\r\n    top: 0;\r\n    bottom: 0;\r\n    left: 0;\r\n    right: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background: rgba(0, 0, 0, 0.3);\r\n    gap: 48px;\r\n}\r\n\r\n.modal-window__wrapper {\r\n    margin: 0 auto;\r\n    width: 540px;\r\n    height: 800px;\r\n    padding: 56px;\r\n    border-radius: 10px;\r\n    background-color: rgba(100%, 100%, 100%, 1);\r\n    box-shadow: 5px 10px 50px 0px rgba(16, 112, 177, 0.20);\r\n    z-index: 100;\r\n}\r\n\r\n.modal-window__wrapper--active {\r\n    display: flex;\r\n}\r\n\r\n.upper__content {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    width: 100%;\r\n    align-content: center;\r\n    justify-content: space-between;\r\n}\r\n\r\n.close__button {\r\n    font-family: $font-gilroy-semibold;\r\n    color: #1F3F68;\r\n    cursor: pointer;\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n.modal-window__h2 {\r\n    color: #1F3F68;\r\n    font-family: $font-gilroy-semibold;\r\n    font-size: 20px;\r\n    font-style: normal;\r\n    font-weight: 600;\r\n    line-height: 30px;\r\n    letter-spacing: 0.8px;\r\n    text-transform: uppercase;\r\n}\r\n\r\n\r\n.form {\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 32px;\r\n}\r\n\r\n.form__item {\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 8px;\r\n\r\n}\r\n\r\n.form__input {\r\n    padding: 21px 200px 21px 42px;\r\n    border-radius: 10px;\r\n    border: 1px solid var(--blue_03, #356EAD);\r\n    opacity: 0.4;\r\n\r\n    color: var(--Blue_01, #1F3F68);\r\n    font-family: $font-gilroy-regular;\r\n    font-size: 16px;\r\n    font-style: normal;\r\n    font-weight: 300;\r\n    line-height: 30px; /* 187.5% */\r\n    letter-spacing: 0.64px;\r\n}\r\n\r\n.form__input-message {\r\n    padding: 21px 200px 93px 36px;\r\n}\r\n\r\n.form__header {\r\n    color: #1F3F68;\r\n    font-family: $font-gilroy-regular;\r\n    font-size: 16px;\r\n    font-style: normal;\r\n    font-weight: 400;\r\n    line-height: 30px; /* 187.5% */\r\n    letter-spacing: 0.64px;\r\n    opacity: 0.8;\r\n}\r\n\r\n.form__submit {\r\n    border-radius: 10px;\r\n    background: var(--blue_04, #5A98D0);\r\n    box-shadow: 5px 20px 50px 0px rgba(16, 112, 177, 0.20);\r\n    border: none;\r\n    padding: 23px 184px;\r\n    margin-top: 65px;\r\n\r\n    color: #FFF;\r\n\r\n    text-align: center;\r\n    font-family: $font-gilroy-semibold;\r\n    font-size: 16px;\r\n    font-style: normal;\r\n    font-weight: 600;\r\n    line-height: 26px;\r\n    letter-spacing: 0.64px;\r\n}\r\n\r\n.error {\r\n    color: red;\r\n    font-family: $font-gilroy-semibold;\r\n    text-align: center;\r\n}\r\n\r\n.error-name, \r\n.error-email,\r\n.error-message {\r\n    display: none;\r\n}\r\n\r\n.error-visible {\r\n    display: block;\r\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1590,10 +1630,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.scss */ "./src/style.scss");
 /* harmony import */ var _ModalWindow_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ModalWindow.scss */ "./src/ModalWindow.scss");
 /* harmony import */ var _ModalWindow_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ModalWindow.js */ "./src/ModalWindow.js");
+/* harmony import */ var _FormValidate_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./FormValidate.js */ "./src/FormValidate.js");
+
 
 
 
 (0,_ModalWindow_js__WEBPACK_IMPORTED_MODULE_2__["default"])();
+(0,_FormValidate_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
 })();
 
 /******/ })()

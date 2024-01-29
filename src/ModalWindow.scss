@@ -28,12 +28,9 @@ $font-gilroy-semibold: "Gilroy-SemiBold";
     height: 100%;
     background: rgba(0, 0, 0, 0.3);
     gap: 48px;
-
 }
 
 .modal-window__wrapper {
-
-
     margin: 0 auto;
     width: 540px;
     height: 800px;
@@ -41,17 +38,12 @@ $font-gilroy-semibold: "Gilroy-SemiBold";
     border-radius: 10px;
     background-color: rgba(100%, 100%, 100%, 1);
     box-shadow: 5px 10px 50px 0px rgba(16, 112, 177, 0.20);
+    z-index: 100;
 }
 
 .modal-window__wrapper--active {
     display: flex;
 }
-
-.body__opacity {
-    opacity: 0;
-}
-
-
 
 .upper__content {
     display: flex;
@@ -146,3 +138,18 @@ $font-gilroy-semibold: "Gilroy-SemiBold";
     letter-spacing: 0.64px;
 }
 
+.error {
+    color: red;
+    font-family: $font-gilroy-semibold;
+    text-align: center;
+}
+
+.error-name, 
+.error-email,
+.error-message {
+    display: none;
+}
+
+.error-visible {
+    display: block;
+}

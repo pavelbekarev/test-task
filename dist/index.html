@@ -161,7 +161,7 @@
                 </div>
             </div>
             <div id="modalWindow" class="modalWindow">
-                <div id="modalWindow" class="modal-window__wrapper">
+                <div id="modal-window__wrapper" class="modal-window__wrapper">
                     <div class="upper__content">
                         <h2 class="modal-window__h2">Send us message</h2>
                         <span class="close__button">X</span>
@@ -179,9 +179,9 @@
                                 type="text" 
                                 name="name" 
                                 placeholder="Your Name"
-                                required
-                                minlength="10"
+                                id="input-name"
                             >
+                            <p class="error error-name">Длина должна быть не меньше 10 симв.</p>
                         </div>
                         <div class="form__item">
                             <label 
@@ -195,9 +195,10 @@
                                 type="text"
                                 name="email" 
                                 placeholder="Your Email"
+                                id="input-email"
                             >
+                            <p class="error error-email">Длина должна быть не меньше 10 симв.</p>
                         </div>
-
                         <div class="form__item">
                             <label 
                                 class="form__header" 
@@ -210,10 +211,17 @@
                                 type="text" 
                                 name="message" 
                                 placeholder="Your Message"
+                                id="input-message"
                             >
+                            <p class="error error-message">Длина должна быть не меньше 10 симв.</p>
                         </div>
                         <div class="form__item">
-                            <input class="form__submit" type="submit" value="SUBMIT">
+                            <input
+                                class="form__submit"
+                                type="submit"
+                                value="SUBMIT"
+                                id="submit-button"
+                            >
                         </div>
                     </form>
                 </div>

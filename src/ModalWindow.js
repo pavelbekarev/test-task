@@ -14,10 +14,10 @@ const ModalWindow = () => {
         modalWindow.classList.toggle("modal-window__wrapper--active");
     })
 
-    document.addEventListener("click", e => {
-        const click = e.composedPath().includes(modalWindow);
-        
-        if ( click ) {
+    modalWindow.addEventListener("click", e => {
+        const click = e.composedPath().includes(document.querySelector(".modal-window__wrapper"));
+
+        if ( !click ) {
             modalWindow.classList.toggle("modal-window__wrapper--active");
         }
     })
