@@ -17,8 +17,8 @@ const FormValidate = () => {
         e.preventDefault();
         console.log("нажатие сработало")
 
-        inputName.value.length < 10 ? errorName.classList.add("error-visible") : errorName.classList.remove("error-visible");
-        inputEmail.value.length < 10 ? errorEmail.classList.add("error-visible") : errorEmail.classList.remove("error-visible");
+        inputName.value.length < 5 ? errorName.classList.add("error-visible") : errorName.classList.remove("error-visible");
+        inputEmail.value.length < 5 ? errorEmail.classList.add("error-visible") : errorEmail.classList.remove("error-visible");
         inputMessage.value.length > 100 || inputMessage.value.length === 0 ? errorMessage.classList.add("error-visible") : errorMessage.classList.remove("error-visible");
 
         if ((errorName.classList.contains("error-visible") ||
