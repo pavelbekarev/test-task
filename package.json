@@ -5,9 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server",
-    "webpack": "webpack -w",
-    "build": "webpack --mode production",
-    "dev": "webpack --mode development --watch"
+    "webpack": "webpack -w"
   },
   "author": "",
   "license": "ISC",

@@ -2,6 +2,228 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/ModalWindow.scss":
+/*!*****************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/ModalWindow.scss ***!
+  \*****************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/getUrl.js */ "./node_modules/css-loader/dist/runtime/getUrl.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2__);
+// Imports
+
+
+
+var ___CSS_LOADER_URL_IMPORT_0___ = new URL(/* asset import */ __webpack_require__(/*! ./fonts/Gilroy-SemiBold.ttf */ "./src/fonts/Gilroy-SemiBold.ttf"), __webpack_require__.b);
+var ___CSS_LOADER_URL_IMPORT_1___ = new URL(/* asset import */ __webpack_require__(/*! ./fonts/Gilroy-Regular.ttf */ "./src/fonts/Gilroy-Regular.ttf"), __webpack_require__.b);
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_URL_REPLACEMENT_0___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_0___);
+var ___CSS_LOADER_URL_REPLACEMENT_1___ = _node_modules_css_loader_dist_runtime_getUrl_js__WEBPACK_IMPORTED_MODULE_2___default()(___CSS_LOADER_URL_IMPORT_1___);
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, `@font-face {
+  font-family: "Gilroy-SemiBold";
+  src: url(${___CSS_LOADER_URL_REPLACEMENT_0___});
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Gilroy-Regular";
+  src: url(${___CSS_LOADER_URL_REPLACEMENT_1___});
+  font-weight: normal;
+}
+.modalWindow {
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  gap: 48px;
+}
+
+.modal-window__wrapper {
+  margin: 5px auto;
+  width: 540px;
+  height: 800px;
+  padding: 20px 56px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 10px 50px 0px rgba(16, 112, 177, 0.2);
+  z-index: 100;
+}
+
+.modal-window__wrapper--active {
+  display: flex;
+}
+
+.upper__content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-content: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.close__button {
+  font-family: "Gilroy-SemiBold";
+  color: #1F3F68;
+  cursor: pointer;
+}
+
+.modal-window__h2 {
+  color: #1F3F68;
+  font-family: "Gilroy-SemiBold";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.form__item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form__input {
+  padding: 21px 200px 21px 42px;
+  border-radius: 10px;
+  border: 1px solid #356EAD;
+  opacity: 0.4;
+  color: var(--Blue_01, #1F3F68);
+  font-family: "Gilroy-Regular";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 30px; /* 187.5% */
+  letter-spacing: 0.64px;
+}
+
+.form__input-message {
+  padding: 21px 200px 93px 36px;
+}
+
+.form__header {
+  color: #1F3F68;
+  font-family: "Gilroy-Regular";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px; /* 187.5% */
+  letter-spacing: 0.64px;
+  opacity: 0.8;
+}
+
+.form__submit {
+  border-radius: 10px;
+  background: #5A98D0;
+  box-shadow: 5px 20px 50px 0px rgba(16, 112, 177, 0.2);
+  border: none;
+  padding: 23px 184px;
+  margin-top: 65px;
+  color: #FFF;
+  text-align: center;
+  font-family: "Gilroy-SemiBold";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0.64px;
+}
+
+.error {
+  color: red;
+  font-family: "Gilroy-SemiBold";
+  font-size: 10px;
+  text-align: center;
+}
+
+.error-name,
+.error-email,
+.error-message {
+  display: none;
+}
+
+.error-visible {
+  display: block;
+}
+
+@media (max-width: 548px) {
+  .modal-window__wrapper {
+    width: 90%;
+  }
+  .form__submit {
+    padding: 23px 0;
+  }
+  .form__input {
+    padding: 21px 10px 21px 42px;
+  }
+}
+.modalWindowValide {
+  display: none;
+  flex-direction: column;
+  padding-top: 25%;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  gap: 48px;
+}
+
+.modalWindowValide__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.modalWindowValide__wrapper {
+  padding: 20px;
+  background-color: #FFF;
+}
+
+.modalWindowValide__wrapper h2 {
+  color: green;
+  font-family: "Gilroy-SemiBold";
+}
+
+.modalWindowValide-visible {
+  display: flex;
+}`, "",{"version":3,"sources":["webpack://./src/ModalWindow.scss"],"names":[],"mappings":"AAAA;EACI,8BAAA;EACA,4CAAA;EACA,mBAAA;AACJ;AAEA;EACI,6BAAA;EACA,4CAAA;EACA,mBAAA;AAAJ;AAMA;EACI,aAAA;EACA,sBAAA;EACA,2BAAA;EACA,uBAAA;EAEA,eAAA;EACA,MAAA;EACA,SAAA;EACA,OAAA;EACA,QAAA;EACA,WAAA;EACA,YAAA;EACA,8BAAA;EACA,SAAA;AALJ;;AAQA;EACI,gBAAA;EACA,YAAA;EACA,aAAA;EACA,kBAAA;EACA,mBAAA;EACA,oCAAA;EACA,qDAAA;EACA,YAAA;AALJ;;AAQA;EACI,aAAA;AALJ;;AAQA;EACI,aAAA;EACA,eAAA;EACA,WAAA;EACA,qBAAA;EACA,8BAAA;EACA,mBAAA;AALJ;;AAQA;EACI,8BA5CmB;EA6CnB,cAAA;EACA,eAAA;AALJ;;AAaA;EACI,cAAA;EACA,8BAxDmB;EAyDnB,eAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA;EACA,qBAAA;EACA,yBAAA;AAVJ;;AAcA;EACI,aAAA;EACA,sBAAA;EACA,SAAA;AAXJ;;AAcA;EACI,aAAA;EACA,sBAAA;EACA,QAAA;AAXJ;;AAeA;EACI,6BAAA;EACA,mBAAA;EACA,yBAAA;EACA,YAAA;EAEA,8BAAA;EACA,6BAvFkB;EAwFlB,eAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA,EAAA,WAAA;EACA,sBAAA;AAbJ;;AAgBA;EACI,6BAAA;AAbJ;;AAgBA;EACI,cAAA;EACA,6BArGkB;EAsGlB,eAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA,EAAA,WAAA;EACA,sBAAA;EACA,YAAA;AAbJ;;AAgBA;EACI,mBAAA;EACA,mBAAA;EACA,qDAAA;EACA,YAAA;EACA,mBAAA;EACA,gBAAA;EAEA,WAAA;EAEA,kBAAA;EACA,8BAxHmB;EAyHnB,eAAA;EACA,kBAAA;EACA,gBAAA;EACA,iBAAA;EACA,sBAAA;AAfJ;;AAkBA;EACI,UAAA;EACA,8BAlImB;EAmInB,eAAA;EACA,kBAAA;AAfJ;;AAkBA;;;EAGI,aAAA;AAfJ;;AAkBA;EACI,cAAA;AAfJ;;AAmBA;EACI;IACI,UAAA;EAhBN;EAmBE;IACI,eAAA;EAjBN;EAoBE;IACI,4BAAA;EAlBN;AACF;AAuBA;EAEI,aAAA;EACA,sBAAA;EAEA,gBAAA;EACA,mBAAA;EACA,eAAA;EACA,MAAA;EACA,SAAA;EACA,OAAA;EACA,QAAA;EACA,WAAA;EACA,YAAA;EACA,8BAAA;EACA,SAAA;AAvBJ;;AA0BA;EACI,aAAA;EACA,sBAAA;EACA,uBAAA;EACA,mBAAA;EACA,mBAAA;AAvBJ;;AA2BA;EACI,aAAA;EACA,sBAAA;AAxBJ;;AA2BA;EACI,YAAA;EACA,8BApMmB;AA4KvB;;AA2BA;EACI,aAAA;AAxBJ","sourcesContent":["@font-face {\r\n    font-family: 'Gilroy-SemiBold';\r\n    src: url('./fonts/Gilroy-SemiBold.ttf');\r\n    font-weight: normal;\r\n}\r\n\r\n@font-face {\r\n    font-family: 'Gilroy-Regular';\r\n    src: url('./fonts/Gilroy-Regular.ttf');\r\n    font-weight: normal;\r\n}\r\n\r\n$font-gilroy-regular: \"Gilroy-Regular\";\r\n$font-gilroy-semibold: \"Gilroy-SemiBold\";\r\n\r\n.modalWindow {\r\n    display: none;\r\n    flex-direction: column;\r\n    justify-content: flex-start;\r\n    align-items: flex-start;\r\n\r\n    position: fixed;\r\n    top: 0;\r\n    bottom: 0;\r\n    left: 0;\r\n    right: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background: rgba(0, 0, 0, 0.3);\r\n    gap: 48px;\r\n}\r\n\r\n.modal-window__wrapper {\r\n    margin: 5px auto;\r\n    width: 540px;\r\n    height: 800px;\r\n    padding: 20px 56px;\r\n    border-radius: 10px;\r\n    background-color: rgba(100%, 100%, 100%, 1);\r\n    box-shadow: 5px 10px 50px 0px rgba(16, 112, 177, 0.20);\r\n    z-index: 100;\r\n}\r\n\r\n.modal-window__wrapper--active {\r\n    display: flex;\r\n}\r\n\r\n.upper__content {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    width: 100%;\r\n    align-content: center;\r\n    justify-content: space-between;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.close__button {\r\n    font-family: $font-gilroy-semibold;\r\n    color: #1F3F68;\r\n    cursor: pointer;\r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n.modal-window__h2 {\r\n    color: #1F3F68;\r\n    font-family: $font-gilroy-semibold;\r\n    font-size: 20px;\r\n    font-style: normal;\r\n    font-weight: 600;\r\n    line-height: 30px;\r\n    letter-spacing: 0.8px;\r\n    text-transform: uppercase;\r\n}\r\n\r\n\r\n.form {\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 32px;\r\n}\r\n\r\n.form__item {\r\n    display: flex;\r\n    flex-direction: column;\r\n    gap: 8px;\r\n\r\n}\r\n\r\n.form__input {\r\n    padding: 21px 200px 21px 42px;\r\n    border-radius: 10px;\r\n    border: 1px solid #356EAD;\r\n    opacity: 0.4;\r\n\r\n    color: var(--Blue_01, #1F3F68);\r\n    font-family: $font-gilroy-regular;\r\n    font-size: 16px;\r\n    font-style: normal;\r\n    font-weight: 300;\r\n    line-height: 30px; /* 187.5% */\r\n    letter-spacing: 0.64px;\r\n}\r\n\r\n.form__input-message {\r\n    padding: 21px 200px 93px 36px;\r\n}\r\n\r\n.form__header {\r\n    color: #1F3F68;\r\n    font-family: $font-gilroy-regular;\r\n    font-size: 16px;\r\n    font-style: normal;\r\n    font-weight: 400;\r\n    line-height: 30px; /* 187.5% */\r\n    letter-spacing: 0.64px;\r\n    opacity: 0.8;\r\n}\r\n\r\n.form__submit {\r\n    border-radius: 10px;\r\n    background: #5A98D0;\r\n    box-shadow: 5px 20px 50px 0px rgba(16, 112, 177, 0.20);\r\n    border: none;\r\n    padding: 23px 184px;\r\n    margin-top: 65px;\r\n\r\n    color: #FFF;\r\n\r\n    text-align: center;\r\n    font-family: $font-gilroy-semibold;\r\n    font-size: 16px;\r\n    font-style: normal;\r\n    font-weight: 600;\r\n    line-height: 26px;\r\n    letter-spacing: 0.64px;\r\n}\r\n\r\n.error {\r\n    color: red;\r\n    font-family: $font-gilroy-semibold;\r\n    font-size: 10px;\r\n    text-align: center;\r\n}\r\n\r\n.error-name, \r\n.error-email,\r\n.error-message {\r\n    display: none;\r\n}\r\n\r\n.error-visible {\r\n    display: block;\r\n}\r\n\r\n\r\n@media (max-width: 548px) {\r\n    .modal-window__wrapper {\r\n        width: 90%; \r\n    }\r\n\r\n    .form__submit {\r\n        padding: 23px 0;\r\n    }\r\n\r\n    .form__input {\r\n        padding: 21px 10px 21px 42px;\r\n    }\r\n\r\n}\r\n\r\n\r\n.modalWindowValide {\r\n    // display: flex;\r\n    display: none;\r\n    flex-direction: column;\r\n    // justify-content: center;\r\n    padding-top: 25%;\r\n    align-items: center;\r\n    position: fixed;\r\n    top: 0;\r\n    bottom: 0;\r\n    left: 0;\r\n    right: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n    background: rgba(0, 0, 0, 0.3);\r\n    gap: 48px;\r\n}\r\n\r\n.modalWindowValide__wrapper {\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: center;\r\n    align-items: center;\r\n    border-radius: 10px;\r\n\r\n}\r\n\r\n.modalWindowValide__wrapper {\r\n    padding: 20px;\r\n    background-color: #FFF;\r\n}\r\n\r\n.modalWindowValide__wrapper h2 {\r\n    color: green;\r\n    font-family: $font-gilroy-semibold;\r\n}\r\n\r\n.modalWindowValide-visible {\r\n    display: flex;\r\n    \r\n}"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss":
 /*!***********************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/style.scss ***!
@@ -1295,8 +1517,9 @@ module.exports = __webpack_require__.p + "cb70fb3e900673f75ad9.svg";
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
-// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
 (() => {
+var __webpack_exports__ = {};
 /*!************************!*\
   !*** ./src/style.scss ***!
   \************************/
@@ -1344,6 +1567,58 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
        /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_style_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_style_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_style_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
+})();
+
+// This entry need to be wrapped in an IIFE because it need to be isolated against other entry modules.
+(() => {
+/*!******************************!*\
+  !*** ./src/ModalWindow.scss ***!
+  \******************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_ModalWindow_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../node_modules/css-loader/dist/cjs.js!../node_modules/postcss-loader/dist/cjs.js!../node_modules/sass-loader/dist/cjs.js!./ModalWindow.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/ModalWindow.scss");
+
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+var options = {};
+
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
+
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_ModalWindow_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+
+
+
+
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_ModalWindow_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_ModalWindow_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_postcss_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_ModalWindow_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 })();
 
