@@ -31,9 +31,7 @@ const FormValidate = () => {
             modalWindowForm.classList.remove("modal-window__wrapper--active")
             modalWindowValide.classList.add("modalWindowValide-visible")
             console.log("Валидация формы не нарушена");
-            inputName.value = "";
-            inputEmail.value = "";
-            inputMessage.value = "";
+            
         }
 
     });
@@ -42,6 +40,7 @@ const FormValidate = () => {
     closeButton.addEventListener("click", () => {
         modalWindowValide.classList.remove("modalWindowValide-visible");
         document.body.style.position = "";
+
     })
 
 

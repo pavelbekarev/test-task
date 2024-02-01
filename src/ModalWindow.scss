@@ -31,10 +31,10 @@ $font-gilroy-semibold: "Gilroy-SemiBold";
 }
 
 .modal-window__wrapper {
-    margin: 0 auto;
+    margin: 5px auto;
     width: 540px;
     height: 800px;
-    padding: 56px;
+    padding: 20px 56px;
     border-radius: 10px;
     background-color: rgba(100%, 100%, 100%, 1);
     box-shadow: 5px 10px 50px 0px rgba(16, 112, 177, 0.20);
@@ -93,7 +93,7 @@ $font-gilroy-semibold: "Gilroy-SemiBold";
 .form__input {
     padding: 21px 200px 21px 42px;
     border-radius: 10px;
-    border: 1px solid var(--blue_03, #356EAD);
+    border: 1px solid #356EAD;
     opacity: 0.4;
 
     color: var(--Blue_01, #1F3F68);
@@ -192,12 +192,22 @@ $font-gilroy-semibold: "Gilroy-SemiBold";
 }
 
 .modalWindowValide__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+}
+
+.modalWindowValide__wrapper {
     padding: 20px;
-    background-color: bisque;
+    background-color: #FFF;
 }
 
 .modalWindowValide__wrapper h2 {
     color: green;
+    font-family: $font-gilroy-semibold;
 }
 
 .modalWindowValide-visible {
