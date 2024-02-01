@@ -467,7 +467,7 @@ footer {
     text-decoration: none;
 }
 
-.footer__span:hover {
+.footer__span:not(:first-child):hover {
     text-decoration: underline;
 }
 
