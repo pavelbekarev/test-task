@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>homepage</title>
 </head>
-<body>
+<body class="body">
     <header>
         <section class="section">
             <div class="wrapper">
                 <div class="navigation__wrapper">
                     <div class="navigation">
-                        <a href="">
+                        <a href="" class="header__logo">
                             <img src="./src/img/logo.svg" alt="Logo">
                         </a>
-                        <a href="">
+                        <a href="" class="header__burger">
                             <img src="./src/img/ic_menu_48px.svg" alt="Icon">
                         </a>
                     </div>
@@ -107,11 +107,11 @@
                             <h1 class="content__h1 footer__h1">Intersted to woek with our team?</h1>
                             <p class="content__description footer__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                         </div>
-                        <a class="lets-talk__button" href="">Let`s Talk</a>
+                        <a id="button" class="lets-talk__button">Let`s Talk</a>
                     </div>
-
-                    
                 </div>
+                
+                
                 <div class="line"></div>
                 <div class="container">
                     <div class="footer__content">
@@ -158,6 +158,82 @@
                     <div class="signature">
                         2019 © Afrianska. All rights reserved.
                     </div>
+                </div>
+            </div>
+            <div id="modalWindow" class="modalWindow">
+                <div id="modal-window__wrapper" class="modal-window__wrapper">
+                    <div class="upper__content">
+                        <h2 class="modal-window__h2">Send us message</h2>
+                        <span class="close__button">X</span>
+                    </div>
+                    <form class="form">
+                        <div class="form__item">
+                            <label 
+                                class="form__header" 
+                                for="name"
+                            >
+                                Full Name
+                            </label>
+                            <input 
+                                class="form__input" 
+                                type="text" 
+                                name="name" 
+                                placeholder="Your Name"
+                                id="input-name"
+                            >
+                            <p class="error error-name">Длина должна быть не меньше 10 симв.</p>
+                        </div>
+                        <div class="form__item">
+                            <label 
+                                class="form__header" 
+                                for="email"
+                            >
+                                Email
+                            </label>
+                            <input 
+                                class="form__input" 
+                                type="text"
+                                name="email" 
+                                placeholder="Your Email"
+                                id="input-email"
+                            >
+                            <p class="error error-email">Длина должна быть не меньше 10 симв.</p>
+                        </div>
+                        <div class="form__item">
+                            <label 
+                                class="form__header" 
+                                for="message"
+                            >
+                                Message
+                            </label>
+                            <input
+                                class="form__input form__input-message" 
+                                type="text" 
+                                name="message" 
+                                placeholder="Your Message"
+                                id="input-message"
+                            >
+                            <p class="error error-message">Длина должна быть не больше 100 симв.</p>
+                        </div>
+                        <div class="form__item">
+                            <input
+                                class="form__submit"
+                                type="submit"
+                                value="SUBMIT"
+                                id="submit-button"
+                            >
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="modalWindowValide">
+                <div class="modalWindowValide__wrapper">
+                    <div class="upper__content">
+                        <h2 class="modal-window__h2">Send us message</h2>
+                        <span id="close__button" class="close__button">X</span>
+                    </div>
+                    <h2>Сообщение успешно отправлено!</h2>
                 </div>
             </div>
         </section>

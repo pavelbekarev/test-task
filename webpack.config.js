@@ -6,7 +6,7 @@ module.exports = {
     devtool: 'source-map',
     entry: {
         main: "./src/index.js",
-        styles: "./src/style.scss",
+        styles: ["./src/style.scss", "./src/ModalWindow.scss"],
         normalize: './node_modules/normalize.css/normalize.css'
     },
     output: {
